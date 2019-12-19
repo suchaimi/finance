@@ -4,6 +4,7 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
+	v1 "github.com/suchaimi/finance/internal/api/v1"
 )
 
 // NewRouter provide a handler api service
