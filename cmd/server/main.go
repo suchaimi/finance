@@ -22,4 +22,8 @@ func main() {
 		Addr:    addr,
 		Handler: router,
 	}
+
+	if err := server.ListenAndServe(); err != nil && err != http.ErrServerClosed {
+		logrus.WithError(err).Error("Server failed.")
+	}
 }
