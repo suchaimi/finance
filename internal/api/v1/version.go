@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/suchaimi/interfaces/finance/internal/config"
 	"github.com/sirupsen/logrus"
+	"github.com/suchaimi/finance/internal/config"
 )
 
 // ServerVersion represet the server version
