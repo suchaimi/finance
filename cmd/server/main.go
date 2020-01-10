@@ -10,7 +10,7 @@ import (
 
 func main() {
 	logrus.SetLevel(logrus.DebugLevel)
-	logrus.WithField("Version", config.Version).Debug("starting server.")
+	logrus.WithField("version", config.Version).Debug("starting server.")
 
 	router, err := api.NewRouter()
 	if err != nil {
@@ -24,6 +24,6 @@ func main() {
 	}
 
 	if err := server.ListenAndServe(); err != nil && err != http.ErrServerClosed {
-		logrus.WithError(err).Error("Server failed.")
+		logrus.WithError(err).Error("server failed.")
 	}
 }
